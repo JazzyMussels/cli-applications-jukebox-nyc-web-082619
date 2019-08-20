@@ -27,8 +27,7 @@ def play(songs)
       return "Playing #{songs[input.to_i - 1]}"
   elsif songs.include?(input) 
       return "Playing #{input}"
-  end
-  end
+  
   if !songs.include?(input)
       return "Invalid input, please try again"
    end
