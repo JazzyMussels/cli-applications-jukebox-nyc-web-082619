@@ -20,19 +20,19 @@ def help
   puts "- exit : exits this program"
 end
 
-#def play(songs)
-#  puts "Please enter a song name or number:"
-#  input = gets.strip
-#  if songs.include?(input) 
-#      return "Playing #{input}"
-#  end
-#  if input.to_i <= songs.length 
-#      return "Playing #{songs[input.to_i - 1]}"
-#  end
-#  if !songs.include?(input)
-#      return "Invalid input, please try again"
-#   end
-#end 
+def play(songs)
+  puts "Please enter a song name or number:"
+  input = gets.strip
+  if input.to_i <= 9
+      return "Playing #{songs[input.to_i - 1]}"
+  elsif songs.include?(input) 
+      return "Playing #{input}"
+  end
+  end
+  if !songs.include?(input)
+      return "Invalid input, please try again"
+   end
+end 
 
 def list(songs)
   songs.each_with_index{|song, index| puts "#{index + 1}. #{song}"}
